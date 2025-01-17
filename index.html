@@ -1,0 +1,782 @@
+<!DOCTYPE HTML>
+<html style="height:100%;">
+	<head>
+		<title>
+			Roosters
+		</title><meta charset="utf-8" />
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            
+	</head><body style="height:100%;">
+		<div class="container-fluid" style="height:100%;">
+			<div class="row">
+				<div class="col-12 col-lg-3 p-2">
+					<select class="form-select form-select-lg" onchange="typeChanged(this.value)">
+						<option value="" selected="true">
+							Selecteer type
+						</option><option value="Leerkrachten">
+							Leerkrachten
+						</option><option value="Klassen">
+							Klassen
+						</option><option value="Lokalen">
+							Lokalen
+						</option><option value="Vakken">
+							Vakken
+						</option>
+					</select>
+				</div><div class="col-12 col-lg-3 p-2">
+					<select id="dropdown_Leerkrachten" class="form-select form-select-lg ttelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;);" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option><option value="Leerkrachten/ELAB.html">
+							Abdellatif El Moussaoui (ELAB)
+						</option><option value="Leerkrachten/VEAL.html">
+							Alain Vercauteren (VEAL)
+						</option><option value="Leerkrachten/EBAL.html">
+							Alexander Ebo (EBAL)
+						</option><option value="Leerkrachten/ANNA.html">
+							Allison Annerel (ANNA)
+						</option><option value="Leerkrachten/REAN.html">
+							An Relaes (REAN)
+						</option><option value="Leerkrachten/VEAN.html">
+							An Van Evelghem (VEAN)
+						</option><option value="Leerkrachten/WIAN.html">
+							An Willems (WIAN)
+						</option><option value="Leerkrachten/DCAN.html">
+							Ann De Clercq (DCAN)
+						</option><option value="Leerkrachten/BUAN.html">
+							Annelies Buyens (BUAN)
+						</option><option value="Leerkrachten/CAAN.html">
+							Annelies Catthoor (CAAN)
+						</option><option value="Leerkrachten/JAAN.html">
+							Anthony Jacobs (JAAN)
+						</option><option value="Leerkrachten/DHAR.html">
+							Arthur D'Haene (DHAR)
+						</option><option value="Leerkrachten/VEBE.html">
+							Benita Verhoeven (VEBE)
+						</option><option value="Leerkrachten/DBBJ.html">
+							Bjorn Debusschere (DBBJ)
+						</option><option value="Leerkrachten/CABR.html">
+							Bram Cant (CABR)
+						</option><option value="Leerkrachten/DECA.html">
+							Carine Dechamps (DECA)
+						</option><option value="Leerkrachten/VECA.html">
+							Cato Verbeken (VECA)
+						</option><option value="Leerkrachten/FRCH.html">
+							Chana Fransen (FRCH)
+						</option><option value="Leerkrachten/VANC.html">
+							Charlotte Vandendries (VANC)
+						</option><option value="Leerkrachten/DVCI.html">
+							Cindy De Vries (DVCI)
+						</option><option value="Leerkrachten/DCDA.html">
+							Daan De Coninck (DCDA)
+						</option><option value="Leerkrachten/HEDA.html">
+							David Heirbaut (HEDA)
+						</option><option value="Leerkrachten/YUDI.html">
+							Dilara Yuca (YUDI)
+						</option><option value="Leerkrachten/BADO.html">
+							Donya Bader (BADO)
+						</option><option value="Leerkrachten/DWED.html">
+							Edith De Windt (DWED)
+						</option><option value="Leerkrachten/HIEL.html">
+							Elke Hiel (HIEL)
+						</option><option value="Leerkrachten/REEL.html">
+							Ellen Relaes (REEL)
+						</option><option value="Leerkrachten/BOEL.html">
+							Els Bourdiaudhy (BOEL)
+						</option><option value="Leerkrachten/DMEL.html">
+							Els De Maeyer (DMEL)
+						</option><option value="Leerkrachten/DHEM.html">
+							Emilie D'Hollander (DHEM)
+						</option><option value="Leerkrachten/VHER.html">
+							Erika Van Hooste (VHER)
+						</option><option value="Leerkrachten/DWEV.html">
+							Eva De Windt (DWEV)
+						</option><option value="Leerkrachten/JOEV.html">
+							Eva Jonckheere (JOEV)
+						</option><option value="Leerkrachten/DHEV.html">
+							Evi D'Hondt (DHEV)
+						</option><option value="Leerkrachten/DPEV.html">
+							Evy De Paepe (DPEV)
+						</option><option value="Leerkrachten/BEFA.html">
+							Farid Benali (BEFA)
+						</option><option value="Leerkrachten/PEFE.html">
+							Femke Peeters (PEFE)
+						</option><option value="Leerkrachten/DIFI.html">
+							Filip Dierickx (DIFI)
+						</option><option value="Leerkrachten/HEFR.html">
+							Frida Heynderickx (HEFR)
+						</option><option value="Leerkrachten/MIGL.html">
+							Glenn Michotte (MIGL)
+						</option><option value="Leerkrachten/DJGR.html">
+							Greetje De Jonghe (DJGR)
+						</option><option value="Leerkrachten/ALHA.html">
+							Hameda Alkorre (ALHA)
+						</option><option value="Leerkrachten/GOHA.html">
+							Hanne Gowie (GOHA)
+						</option><option value="Leerkrachten/NEHA.html">
+							Hanne Nelissen (NEHA)
+						</option><option value="Leerkrachten/ELHA.html">
+							Hasna El Moussaoui (ELHA)
+						</option><option value="Leerkrachten/VPHI.html">
+							Hilde Van Poppel (VPHI)
+						</option><option value="Leerkrachten/VDHI.html">
+							Hildegarde Van Duyse (VDHI)
+						</option><option value="Leerkrachten/VWIL.html">
+							Ilse Van Wanseele (VWIL)
+						</option><option value="Leerkrachten/DIIN.html">
+							Inge Dierckx (DIIN)
+						</option><option value="Leerkrachten/REIS.html">
+							Isabel Reynaerts (REIS)
+						</option><option value="Leerkrachten/SIJA.html">
+							Jana Six (SIJA)
+						</option><option value="Leerkrachten/VMJA.html">
+							Jana Van Mullem (VMJA)
+						</option><option value="Leerkrachten/GAJA.html">
+							Janice Galle (GAJA)
+						</option><option value="Leerkrachten/THJA.html">
+							Jarno Thierens (THJA)
+						</option><option value="Leerkrachten/DIEJ.html">
+							Jasper Dierick (DIEJ)
+						</option><option value="Leerkrachten/DIJA.html">
+							Jasper Dierickx (DIJA)
+						</option><option value="Leerkrachten/BRJE.html">
+							Jellien Braem (BRJE)
+						</option><option value="Leerkrachten/VNJE.html">
+							Jeroen Van Nieuwenhuyse (VNJE)
+						</option><option value="Leerkrachten/SOJI.html">
+							Jitse Sonneville (SOJI)
+						</option><option value="Leerkrachten/DCJO.html">
+							Joke De Clercq (DCJO)
+						</option><option value="Leerkrachten/HEJO.html">
+							Jolien Heyndrickx (HEJO)
+						</option><option value="Leerkrachten/DRJO.html">
+							Jonas De Ridder (DRJO)
+						</option><option value="Leerkrachten/JAJO.html">
+							Jorik Jacob (JAJO)
+						</option><option value="Leerkrachten/VBJO.html">
+							Joris Van Bogaert (VBJO)
+						</option><option value="Leerkrachten/VCJU.html">
+							Julie Van Cleemput (VCJU)
+						</option><option value="Leerkrachten/VDBJ.html">
+							Jurgen Van Den Bergh (VDBJ)
+						</option><option value="Leerkrachten/DHJU.html">
+							Justine De Hooghe (DHJU)
+						</option><option value="Leerkrachten/VAKA.html">
+							Kaat Vandenhoutaer (VAKA)
+						</option><option value="Leerkrachten/DVKA.html">
+							Karel De Vos (DVKA)
+						</option><option value="Leerkrachten/COPK.html">
+							Karen Coppens (COPK)
+						</option><option value="Leerkrachten/VVKA.html">
+							Karolien Van Vaerenbergh (VVKA)
+						</option><option value="Leerkrachten/WIKA.html">
+							Kathy Willems (WIKA)
+						</option><option value="Leerkrachten/VDDK.html">
+							Kelsey Van Den Driessche (VDDK)
+						</option><option value="Leerkrachten/BEKI.html">
+							Kim Bertels (BEKI)
+						</option><option value="Leerkrachten/BLKI.html">
+							Kim Blommaert (BLKI)
+						</option><option value="Leerkrachten/JOKI.html">
+							Kim Jonkers (JOKI)
+						</option><option value="Leerkrachten/PIKI.html">
+							Kim Pinoy (PIKI)
+						</option><option value="Leerkrachten/BAKI.html">
+							Kitty Baeck (BAKI)
+						</option><option value="Leerkrachten/DHKR.html">
+							Kris De Hooghe (DHKR)
+						</option><option value="Leerkrachten/STLA.html">
+							Larissa Stuer (STLA)
+						</option><option value="Leerkrachten/VDLA.html">
+							Laura Van Daal (VDLA)
+						</option><option value="Leerkrachten/VDVL.html">
+							Laura Van De Voorde (VDVL)
+						</option><option value="Leerkrachten/VGLA.html">
+							Laura Van Grembergen (VGLA)
+						</option><option value="Leerkrachten/HELE.html">
+							Leen Heylen (HELE)
+						</option><option value="Leerkrachten/PILE.html">
+							Leen Pilate (PILE)
+						</option><option value="Leerkrachten/VDLE.html">
+							Leen Van Damme (VDLE)
+						</option><option value="Leerkrachten/CLLI.html">
+							Lia Claes (CLLI)
+						</option><option value="Leerkrachten/VCLI.html">
+							Liana Vercauteren (VCLI)
+						</option><option value="Leerkrachten/DHLI.html">
+							Lien De Hooghe (DHLI)
+						</option><option value="Leerkrachten/VAEL.html">
+							Liesbeth Van Erck (VAEL)
+						</option><option value="Leerkrachten/LELI.html">
+							Lieve Leroux (LELI)
+						</option><option value="Leerkrachten/VPLI.html">
+							Linde Van Puyenbroeck (VPLI)
+						</option><option value="Leerkrachten/OMLI.html">
+							Lindsy Ombrouck (OMLI)
+						</option><option value="Leerkrachten/VDNL.html">
+							Lisa Van den Neucker (VDNL)
+						</option><option value="Leerkrachten/DPLO.html">
+							Lobke De Paepe (DPLO)
+						</option><option value="Leerkrachten/SCLO.html">
+							Lore Schepens (SCLO)
+						</option><option value="Leerkrachten/DELY.html">
+							Lynn Devos (DELY)
+						</option><option value="Leerkrachten/MAMA.html">
+							Marianne Martens (MAMA)
+						</option><option value="Leerkrachten/REMA.html">
+							Marieke Renard (REMA)
+						</option><option value="Leerkrachten/NEMI.html">
+							Marijke Neckers (NEMI)
+						</option><option value="Leerkrachten/VAMA.html">
+							Marijke Van Steenlandt (VAMA)
+						</option><option value="Leerkrachten/SCME.html">
+							Méghane Schalley (SCME)
+						</option><option value="Leerkrachten/HAME.html">
+							Mehriban Hançer (HAME)
+						</option><option value="Leerkrachten/DHME.html">
+							Melissa D'Haen (DHME)
+						</option><option value="Leerkrachten/MEMI.html">
+							Michel Meersman (MEMI)
+						</option><option value="Leerkrachten/BUMI.html">
+							Miek Buytaert (BUMI)
+						</option><option value="Leerkrachten/VGMI.html">
+							Mieke Van Gavere (VGMI)
+						</option><option value="Leerkrachten/HEMI.html">
+							Mieken Helsen (HEMI)
+						</option><option value="Leerkrachten/VHMY.html">
+							Mylene Van Houwenhove (VHMY)
+						</option><option value="Leerkrachten/VBNA.html">
+							Nan Van Brande (VBNA)
+						</option><option value="Leerkrachten/VONA.html">
+							Nancy Van Overschelde (VONA)
+						</option><option value="Leerkrachten/ELNA.html">
+							Naoual El Mokadem (ELNA)
+						</option><option value="Leerkrachten/STNA.html">
+							Nathalie Steyaert (STNA)
+						</option><option value="Leerkrachten/VGNA.html">
+							Nathalie Van Garsse (VGNA)
+						</option><option value="Leerkrachten/ALNE.html">
+							Nele Allaert (ALNE)
+						</option><option value="Leerkrachten/VONI.html">
+							Nicky Vogels (VONI)
+						</option><option value="Leerkrachten/DRNI.html">
+							Nikki De Ruysscher (DRNI)
+						</option><option value="Leerkrachten/MOPE.html">
+							Peter Moens (MOPE)
+						</option><option value="Leerkrachten/VDPI.html">
+							Piet Van Daele (VDPI)
+						</option><option value="Leerkrachten/MIPI.html">
+							Pieter Michels (MIPI)
+						</option><option value="Leerkrachten/OURA.html">
+							Rachid Ouifak (OURA)
+						</option><option value="Leerkrachten/TISA.html">
+							Sabrina Tinck (TISA)
+						</option><option value="Leerkrachten/VLSA.html">
+							Sam Van Lent (VLSA)
+						</option><option value="Leerkrachten/DCSA.html">
+							Samira De Clercq (DCSA)
+						</option><option value="Leerkrachten/DMSA.html">
+							Sarah De Maeyer (DMSA)
+						</option><option value="Leerkrachten/VDSS.html">
+							Saskia Van der Stricht (VDSS)
+						</option><option value="Leerkrachten/WESA.html">
+							Saskia Werkers (WESA)
+						</option><option value="Leerkrachten/DCSH.html">
+							Shikha De Cock (DCSH)
+						</option><option value="Leerkrachten/VWSI.html">
+							Simon Van Weereld (VWSI)
+						</option><option value="Leerkrachten/NESI.html">
+							Sindy Neuckens (NESI)
+						</option><option value="Leerkrachten/CLSO.html">
+							Sofie Clement (CLSO)
+						</option><option value="Leerkrachten/HESO.html">
+							Sofie Helsen (HESO)
+						</option><option value="Leerkrachten/HENS.html">
+							Sofie Hennebel (HENS)
+						</option><option value="Leerkrachten/GESO.html">
+							Soojke Geeraerts (GESO)
+						</option><option value="Leerkrachten/DMSO.html">
+							Sophie De Meulenaere (DMSO)
+						</option><option value="Leerkrachten/VEST.html">
+							Stefanie Verschaeren (VEST)
+						</option><option value="Leerkrachten/SAST.html">
+							Steffi Saerens (SAST)
+						</option><option value="Leerkrachten/VDST.html">
+							Stephanie Van Damme (VDST)
+						</option><option value="Leerkrachten/VKST.html">
+							Steven Van Kerckhove (VKST)
+						</option><option value="Leerkrachten/LIST.html">
+							Stijn Lipiec (LIST)
+						</option><option value="Leerkrachten/DGSV.html">
+							Sven De Grijse (DGSV)
+						</option><option value="Leerkrachten/VATE.html">
+							Tess Vandamme (VATE)
+						</option><option value="Leerkrachten/GOTE.html">
+							Tessa Goossens (GOTE)
+						</option><option value="Leerkrachten/MATI.html">
+							Tina Maes (MATI)
+						</option><option value="Leerkrachten/DETI.html">
+							Tine Denecker (DETI)
+						</option><option value="Leerkrachten/VATI.html">
+							Tineke Van Akoleyen (VATI)
+						</option><option value="Leerkrachten/ROTO.html">
+							Tom Roose (ROTO)
+						</option><option value="Leerkrachten/SIUR.html">
+							Ursulin Silberie -Semeleer (SIUR)
+						</option><option value="Leerkrachten/INVE.html">
+							Véronique Ingels (INVE)
+						</option><option value="Leerkrachten/LAVI.html">
+							Vicky Laureys (LAVI)
+						</option><option value="Leerkrachten/ANVI.html">
+							Vincent Antonis (ANVI)
+						</option><option value="Leerkrachten/VSWI.html">
+							Wim Van Sande (VSWI)
+						</option>
+					</select><select id="dropdown_Klassen" class="form-select form-select-lg ttelements" onchange="elementChanged(this.value, &#39;nodeContainer&#39;);" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option><option value="Klassen/1A1.html">
+							1A1
+						</option><option value="Klassen/1A2.html">
+							1A2
+						</option><option value="Klassen/1A3.html">
+							1A3
+						</option><option value="Klassen/1B1.html">
+							1B1
+						</option><option value="Klassen/1B2.html">
+							1B2
+						</option><option value="Klassen/2A1.html">
+							2A1
+						</option><option value="Klassen/2A2.html">
+							2A2
+						</option><option value="Klassen/2B1.html">
+							2B1
+						</option><option value="Klassen/2B2.html">
+							2B2
+						</option><option value="Klassen/3ABK.html">
+							3ABK
+						</option><option value="Klassen/3BEO.html">
+							3BEO
+						</option><option value="Klassen/3DE.html">
+							3DE
+						</option><option value="Klassen/3EC.html">
+							3EC
+						</option><option value="Klassen/3OL.html">
+							3OL
+						</option><option value="Klassen/4ABK.html">
+							4ABK
+						</option><option value="Klassen/4BEO.html">
+							4BEO
+						</option><option value="Klassen/4EC.html">
+							4EC
+						</option><option value="Klassen/4OL.html">
+							4OL
+						</option>
+					</select><select id="dropdown_Lokalen" class="form-select form-select-lg ttelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;);" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option><option value="Lokalen/LOK_1A1.html">
+							Lokaal 1A1
+						</option><option value="Lokalen/LOK_1A2.html">
+							Lokaal 1A2
+						</option><option value="Lokalen/LOK_1A3.html">
+							Lokaal 1A3
+						</option><option value="Lokalen/LOK_1B1.html">
+							Lokaal 1B1
+						</option><option value="Lokalen/LOK_1B2.html">
+							Lokaal 1B2
+						</option><option value="Lokalen/LOK_CONTAINER1.html">
+							Lokaal 2A1
+						</option><option value="Lokalen/LOK_CONTAINER2.html">
+							Lokaal 2A2
+						</option><option value="Lokalen/LOK_2B1.html">
+							Lokaal 2B1
+						</option><option value="Lokalen/LOK_2B2.html">
+							Lokaal 2B2
+						</option><option value="Lokalen/LOK_3DE.html">
+							Lokaal 3DE
+						</option><option value="Lokalen/LOK_3OL.html">
+							Lokaal 3OL
+						</option><option value="Lokalen/LOK_4EC.html">
+							Lokaal 4EC
+						</option><option value="Lokalen/LOK_4OL.html">
+							Lokaal 4OL
+						</option><option value="Lokalen/LOK_BADZAAL.html">
+							Lokaal BADZAAL
+						</option><option value="Lokalen/LOK_BLAUWE_KLAS.html">
+							Lokaal BLAUWE_KLAS
+						</option><option value="Lokalen/LOK_DIDACTISCHE_KEUKEN.html">
+							Lokaal DIDACTISCHE_KEUKEN
+						</option><option value="Lokalen/LOK_GROENE_KLAS.html">
+							Lokaal GROENE_KLAS
+						</option><option value="Lokalen/LOK_GROTE_VERGADERZAAL.html">
+							Lokaal GROTE_VERGADERZAAL
+						</option><option value="Lokalen/LOK_HORECA.html">
+							Lokaal HORECA
+						</option><option value="Lokalen/LOK_ICT.html">
+							Lokaal ICT
+						</option><option value="Lokalen/LOK_INDOOR.html">
+							Lokaal INDOOR
+						</option><option value="Lokalen/LOK_KINE.html">
+							Lokaal KINE
+						</option><option value="Lokalen/LOK_KLEINE_VERGADERZAAL.html">
+							Lokaal KLEINE_VERGADERZAAL
+						</option><option value="Lokalen/LOK_KUNST.html">
+							Lokaal KUNST
+						</option><option value="Lokalen/LOK_LOGO.html">
+							Lokaal LOGO
+						</option><option value="Lokalen/LOK_MACHINEZAAL.html">
+							Lokaal MACHINEZAAL
+						</option><option value="Lokalen/LOK_MFC.html">
+							Lokaal MFC
+						</option><option value="Lokalen/LOK_MICRO_INDOOR.html">
+							Lokaal MICRO_INDOOR
+						</option><option value="Lokalen/LOK_MINI_INDOOR.html">
+							Lokaal MINI_INDOOR
+						</option><option value="Lokalen/LOK_MINI_OUTDOOR.html">
+							Lokaal MINI_OUTDOOR
+						</option><option value="Lokalen/LOK_MPI.html">
+							Lokaal MPI
+						</option><option value="Lokalen/LOK_MUZO_A.html">
+							Lokaal MUZO_A
+						</option><option value="Lokalen/LOK_MUZO_B.html">
+							Lokaal MUZO_B
+						</option><option value="Lokalen/LOK_MUZO_T.html">
+							Lokaal MUZO_T
+						</option><option value="Lokalen/LOK_O1.html">
+							Lokaal O1
+						</option><option value="Lokalen/LOK_O2.html">
+							Lokaal O2
+						</option><option value="Lokalen/LOK_O3.html">
+							Lokaal O3
+						</option><option value="Lokalen/LOK_O4.html">
+							Lokaal O4
+						</option><option value="Lokalen/LOK_O5.html">
+							Lokaal O5
+						</option><option value="Lokalen/LOK_OUTDOOR.html">
+							Lokaal OUTDOOR
+						</option><option value="Lokalen/LOK_OV4.html">
+							Lokaal OV4
+						</option><option value="Lokalen/LOK_POLYZAAL.html">
+							Lokaal POLYZAAL
+						</option><option value="Lokalen/LOK_REFTER.html">
+							Lokaal REFTER
+						</option><option value="Lokalen/LOK_REKENKLAS.html">
+							Lokaal REKENKLAS
+						</option><option value="Lokalen/LOK_RODE_KLAS.html">
+							Lokaal RODE_KLAS
+						</option><option value="Lokalen/LOK_SNOEZEL.html">
+							Lokaal SNOEZEL
+						</option><option value="Lokalen/LOK_T1.html">
+							Lokaal T1
+						</option><option value="Lokalen/LOK_T2.html">
+							Lokaal T2
+						</option><option value="Lokalen/LOK_T3.html">
+							Lokaal T3
+						</option><option value="Lokalen/LOK_T4.html">
+							Lokaal T4
+						</option><option value="Lokalen/LOK_T5.html">
+							Lokaal T5
+						</option><option value="Lokalen/LOK_T6.html">
+							Lokaal T6
+						</option><option value="Lokalen/LOK_TECHNIEK.html">
+							Lokaal TECHNIEK
+						</option><option value="Lokalen/LOK_TN_TURNZAAL.html">
+							Lokaal TN_TURNZAAL
+						</option><option value="Lokalen/LOK_TURNZAAL_1.html">
+							Lokaal TURNZAAL_1
+						</option><option value="Lokalen/LOK_TURNZAAL_2.html">
+							Lokaal TURNZAAL_2
+						</option><option value="Lokalen/LOK_TURNZAAL_3.html">
+							Lokaal TURNZAAL_3
+						</option><option value="Lokalen/LOK_UNIT2.html">
+							Lokaal UNIT2
+						</option><option value="Lokalen/LOK_UNIT3.html">
+							Lokaal UNIT3
+						</option><option value="Lokalen/LOK_UNIT4.html">
+							Lokaal UNIT4
+						</option><option value="Lokalen/LOK_V1.html">
+							Lokaal V1
+						</option><option value="Lokalen/LOK_V2.html">
+							Lokaal V2
+						</option><option value="Lokalen/LOK_V3.html">
+							Lokaal V3
+						</option><option value="Lokalen/LOK_V4.html">
+							Lokaal V4
+						</option><option value="Lokalen/LOK_VERPLEEGSTER.html">
+							Lokaal VERPLEEGSTER
+						</option><option value="Lokalen/LOK_WET.html">
+							Lokaal WETENSCHAP
+						</option><option value="Lokalen/LOK_WITTE_KLAS.html">
+							Lokaal Witte_klas
+						</option><option value="Lokalen/LOK_Z1.html">
+							Lokaal Z1
+						</option><option value="Lokalen/LOK_Z2.html">
+							Lokaal Z2
+						</option><option value="Lokalen/LOK_Z3.html">
+							Lokaal Z3
+						</option><option value="Lokalen/LOK_Z4.html">
+							Lokaal Z4
+						</option><option value="Lokalen/LOK_Z5.html">
+							Lokaal Z5
+						</option><option value="Lokalen/LOK_Z6.html">
+							Lokaal Z6
+						</option><option value="Lokalen/LOK_ZWARTE_KLAS.html">
+							Lokaal Zwarte_klas
+						</option><option value="Lokalen/LOK_STER.html">
+							Sporthal De Ster
+						</option><option value="Lokalen/VrijeLokalen.html">
+							Vrije lokalen
+						</option>
+					</select><select id="dropdown_Vakken" class="form-select form-select-lg ttelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;);" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option><option value="Vakken/3D_LAB.html">
+							3D LAB
+						</option><option value="Vakken/AA.html">
+							Aardrijkskunde
+						</option><option value="Vakken/AMB.html">
+							Ambulant uur
+						</option><option value="Vakken/ADW.html">
+							Anders denken en waarnemen
+						</option><option value="Vakken/ARCH.html">
+							Architecturale vorming
+						</option><option value="Vakken/ART_LAB.html">
+							ART LAB
+						</option><option value="Vakken/ART_EX.html">
+							Artistieke expressie
+						</option><option value="Vakken/ART.html">
+							Artistieke vorming
+						</option><option value="Vakken/BG.html">
+							Basisgeletterdheid
+						</option><option value="Vakken/BO_EO.html">
+							Basisoptie: economie en organisatie
+						</option><option value="Vakken/BO_KC.html">
+							Basisoptie: kunst en creatie
+						</option><option value="Vakken/BB.html">
+							BB uur
+						</option><option value="Vakken/BB_VAST.html">
+							BB uur op vast tijdstip
+						</option><option value="Vakken/BENR1.html">
+							Bedrijfeconomie en recht 1
+						</option><option value="Vakken/BENR2.html">
+							Bedrijfeconomie en recht 2
+						</option><option value="Vakken/BV.html">
+							Beeldende vorming
+						</option><option value="Vakken/BIO.html">
+							Biologie
+						</option><option value="Vakken/CHE.html">
+							Chemie
+						</option><option value="Vakken/CB.html">
+							Cultureel bewustzijn
+						</option><option value="Vakken/DESIGN.html">
+							Design lab
+						</option><option value="Vakken/EC.html">
+							Economie
+						</option><option value="Vakken/EO.html">
+							Economie en organisatie
+						</option><option value="Vakken/EFG.html">
+							Economische en financiële geletterdheid
+						</option><option value="Vakken/ENG.html">
+							Engels
+						</option><option value="Vakken/FRA.html">
+							Frans
+						</option><option value="Vakken/FYS.html">
+							Fysica
+						</option><option value="Vakken/RKG.html">
+							Godsdienst
+						</option><option value="Vakken/HMV.html">
+							Historisch maatschappelijke vorming
+						</option><option value="Vakken/INF_WET.html">
+							Informatica wetenschappen
+						</option><option value="Vakken/ISL.html">
+							Islamitische godsdienst
+						</option><option value="Vakken/KR_FT.html">
+							Klassenraad: fulltimes
+						</option><option value="Vakken/KR_PT.html">
+							Klassenraad: parttimes
+						</option><option value="Vakken/KB.html">
+							Kunstbeschouwing
+						</option><option value="Vakken/LO.html">
+							LO en gezondheidseducatie
+						</option><option value="Vakken/MUZ.html">
+							Muzikale opvoeding
+						</option><option value="Vakken/NED.html">
+							Nederlands
+						</option><option value="Vakken/OPTIE_WIS.html">
+							Optie wiskunde
+						</option><option value="Vakken/PAV_A.html">
+							PAV A
+						</option><option value="Vakken/PAV_B.html">
+							PAV B
+						</option><option value="Vakken/PGD.html">
+							Protestantse godsdienst
+						</option><option value="Vakken/TALEN.html">
+							Talen
+						</option><option value="Vakken/TC.html">
+							Teamcoach
+						</option><option value="Vakken/TECHN.html">
+							Techniek
+						</option><option value="Vakken/TEC.html">
+							Toegepaste economie
+						</option><option value="Vakken/TEC_BE.html">
+							Toegepaste economie: bedrijfseconomie
+						</option><option value="Vakken/TEC_HE.html">
+							Toegepaste economie: handelseconomie
+						</option><option value="Vakken/TINF.html">
+							Toegepaste informatica
+						</option><option value="Vakken/VVV.html">
+							VVV
+						</option><option value="Vakken/WT.html">
+							Waarnemingstekenen
+						</option><option value="Vakken/WET.html">
+							Wetenschappen
+						</option><option value="Vakken/WIS.html">
+							Wiskunde
+						</option><option value="Vakken/NCZ.html">
+							Zedenleer
+						</option>
+					</select>
+				</div><div class="col-12 col-lg-3 p-2">
+					<select id="dropdown_ll_1A1" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_1A2" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_1A3" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_2A1" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_2A2" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_1B1" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_1B2" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_2B1" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_2B2" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_3ABK" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_3EC" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_3BEO" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_4ABK" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_4BEO" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_4EC" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_3OL" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_3DE" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select><select id="dropdown_ll_4OL" class="form-select form-select-lg llelements" onchange="loadHtmlInContainer(this.value, &#39;nodeContainer&#39;)" style="display:none;">
+						<option value="" selected="true">
+							Selecteer
+						</option>
+					</select>
+				</div>
+			</div><div class="row" style="height:90%;">
+				<div class="col-12">
+					<div id="nodeContainer" style="height:100%;width:auto;overflow:hidden;">
+
+					</div>
+				</div>
+			</div>
+		</div>
+<script type="text/javascript">
+    function typeChanged(dd) {
+         if (dd) {
+             var ttelements = document.getElementsByClassName("ttelements");
+             var i;
+             for (i = 0; i < ttelements.length; i++) {
+                ttelements[i].style.display = 'none';
+                ttelements[i].value = '';
+             }
+             document.getElementById('dropdown_' + dd).style.display = 'block';
+         }
+    }
+
+    function elementChangedLL(dd) {
+        if (dd) {
+            dd = dd.substring(8).replace(".html", "");
+            var llelements = document.getElementsByClassName("llelements");
+            var i;
+            for (i = 0; i < llelements.length; i++) {
+                llelements[i].style.display = 'none';
+                llelements[i].value = '';
+            }
+            var llElement = document.getElementById('dropdown_ll_' + dd);
+            if (llElement) {
+                llElement.style.display = 'block';
+            }
+        }
+    }
+
+    function elementChanged(page, containerID) {
+        loadHtmlInContainer(page, containerID);
+        elementChangedLL(page);
+    }
+
+    function loadHtmlInContainer(page, containerID) {
+        if (page) {
+            document.getElementById(containerID).innerHTML = '<object type="text/html" data="' + page + '" style="height:100%; width: 100%"></object>';
+        }
+    }
+
+    function filterFunction(inputId, dropdownId) {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById(inputId);
+        filter = input.value.toUpperCase();
+        div = document.getElementById(dropdownId);
+        a = div.getElementsByTagName("option");
+        for (i = 0; i < a.length; i++) {
+            txtValue = a[i].textContent || a[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                a[i].style.display = '';
+            } else {
+                a[i].style.display = 'none';
+            }
+        }
+    }
+</script>
+
+	</body>
+</html>

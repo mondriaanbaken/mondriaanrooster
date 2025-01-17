@@ -1,0 +1,75 @@
+.header {
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+}
+
+.dag {
+}
+
+.uur {
+}
+
+.middag {
+}
+
+.buitenrooster {
+    background-color: lightgray !important;
+}
+
+.rooster {
+}
+
+.opdracht {
+}
+
+.Les {
+}
+
+.Wens {
+    display: none;
+}
+
+.Examen {
+}
+
+.Toezicht {
+}
+
+.Klas {
+}
+
+.Leerkracht {
+}
+
+.Lokaal {
+}
+
+.Vak {
+}
+
+.Varia {
+}
+
+.Venster {
+}
+
+.diff {
+    color: red;
+}
+
+.diffNode {
+    font-style: italic;
+}
+
+.Afwezig {
+    text-decoration: line-through
+}
+
+.opdracht > div {
+    border-bottom: 1px dotted;
+}
+
+.opdracht > div:last-child {
+    border-bottom: 0px;
+}
