@@ -1,0 +1,29 @@
+name: Unzip and Deploy
+
+on:
+  push:
+    paths:
+      - 'roster.zip'  # Only trigger when this specific file is pushed
+
+jobs:
+  unzip-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2  # Checks out the repository files
+
+      - name: Unzip the file
+        run: |
+          mkdir -p extracted_files  # Create a folder to store the unzipped files
+          unzip roster.zip -d extracted_files  # Unzip the file into extracted_files folder
+
+      - name: Move files to the main directory
+        run: |
+          cp -r extracted_files/* .  # Move the extracted files to the main directory
+
+      - name: Commit and push changes
+        run: |
+          git add .
+          git commit -m "Update with new files from the ZIP"
+          git push  # Pushes the changes back to the repository
