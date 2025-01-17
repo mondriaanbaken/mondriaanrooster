@@ -1,0 +1,33 @@
+name: Unzip and Update Files
+
+on:
+  push:
+    paths:
+      - 'rooster.zip'  # Zorg ervoor dat je bestand specifiek is, bijv. rooster.zip
+      - 'path/to/your/zipfile/*.zip'  # Pas het pad aan voor meerdere zipbestanden
+  workflow_dispatch:  # Hiermee kun je de actie handmatig starten
+
+jobs:
+  unzip-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Unzip the file
+        run: |
+          mkdir -p extracted_files
+          unzip rooster.zip -d extracted_files
+
+      - name: Copy extracted files
+        run: |
+          cp -r extracted_files/* .  # Dit kopieert de bestanden naar de root van je repo
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "pieter.michels@sbsobaken.be"
+          git config --local user.name "MIPI"
+          git add .
+          git commit -m "Update rooster files"
+          git push
